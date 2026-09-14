@@ -1,0 +1,457 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #050816;
+    color: #f5f7ff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+.secondary-btn {
+    font: inherit;
+}
+
+/* NAVBAR */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    background: rgba(6, 10, 20, 0.78);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px 32px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 900;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.92rem;
+}
+
+.logo {
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    font-size: 1.4rem;
+    background: linear-gradient(135deg, #ff4d4d, #ff9a3d);
+    box-shadow: 0 12px 25px rgba(255, 77, 77, 0.45);
+}
+
+nav ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 28px;
+}
+
+nav a {
+    color: #e9edf9;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 0;
+    height: 2px;
+    background: #ff4d4d;
+    transition: width 0.3s ease;
+}
+
+nav a:hover {
+    color: #ff7a66;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+
+/* HERO */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 140px 8% 90px;
+    background:
+        radial-gradient(circle at top left, rgba(255, 77, 77, 0.22), transparent 32%),
+        linear-gradient(120deg, #090d18 10%, #101826 45%, #12162e 100%);
+}
+
+.hero-content {
+    max-width: 760px;
+}
+
+.small-title {
+    color: #ff6a4d;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    font-weight: 800;
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    font-size: clamp(2.8rem, 5vw, 5rem);
+    line-height: 0.95;
+    margin-bottom: 22px;
+    letter-spacing: -0.04em;
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    color: #ff5c5c;
+    text-shadow: 0 0 18px rgba(255, 92, 92, 0.45);
+}
+
+.hero p {
+    color: #ced5ea;
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 32px;
+    max-width: 630px;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    flex-wrap: wrap;
+    margin-bottom: 34px;
+}
+
+button,
+.secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 14px;
+    padding: 16px 28px;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+}
+
+button {
+    background: linear-gradient(135deg, #ff4d4d, #ff8a3d);
+    color: white;
+    box-shadow: 0 18px 35px rgba(255, 84, 84, 0.35);
+}
+
+button:hover,
+.secondary-btn:hover {
+    transform: translateY(-2px) scale(1.01);
+}
+
+.secondary-btn {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    color: #f2f5ff;
+}
+
+.stats-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.mini-stat {
+    min-width: 135px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 16px;
+    padding: 18px 16px;
+    text-align: center;
+}
+
+.mini-stat strong {
+    display: block;
+    font-size: 1.6rem;
+    color: #ff7f66;
+    margin-bottom: 4px;
+}
+
+.mini-stat span {
+    color: #c7cee7;
+    font-size: 0.8rem;
+}
+
+/* PLAYERS */
+.players {
+    padding: 110px 8% 90px;
+    background: #0a0f1d;
+    text-align: center;
+}
+
+.section-heading {
+    margin-bottom: 38px;
+}
+
+.eyebrow {
+    color: #ff7b5c;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.players h2,
+.about h2 {
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    text-transform: uppercase;
+    letter-spacing: -0.03em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aab4cf;
+    font-size: 1rem;
+}
+
+.player-container {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.player-card {
+    width: 270px;
+    min-height: 380px;
+    padding: 24px 20px 20px;
+    background: linear-gradient(180deg, rgba(20, 28, 44, 0.98), rgba(12, 17, 28, 0.98));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+}
+
+.player-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(255, 91, 89, 0.15), transparent 50%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.player-card:hover {
+    transform: translateY(-10px);
+    border-color: rgba(255, 117, 94, 0.8);
+    box-shadow: 0 18px 40px rgba(255, 89, 89, 0.18);
+}
+
+.player-card:hover::before {
+    opacity: 1;
+}
+
+.player-number {
+    position: absolute;
+    top: 18px;
+    right: 20px;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.7rem;
+    font-weight: 900;
+}
+
+.avatar {
+    width: 106px;
+    height: 106px;
+    margin: 30px auto 18px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 2.5rem;
+    background: linear-gradient(135deg, #ff5a5a, #ffb062);
+    box-shadow: 0 18px 25px rgba(255, 90, 90, 0.35);
+    position: relative;
+    z-index: 1;
+}
+
+.player-card h3 {
+    font-size: 1.7rem;
+    margin-bottom: 8px;
+    position: relative;
+    z-index: 1;
+}
+
+.role {
+    color: #ff9c7d;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.72rem;
+}
+
+.hero-name {
+    color: #edf2ff;
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.player-card .desc {
+    color: #b0b9ce;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.stats span {
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #ebeffd;
+}
+
+/* ABOUT */
+.about {
+    padding: 100px 8% 110px;
+    background: #0b1220;
+    text-align: center;
+}
+
+.about > p {
+    max-width: 760px;
+    margin: 22px auto 46px;
+    color: #b5bfd6;
+    line-height: 1.9;
+    font-size: 1.05rem;
+}
+
+.features {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    flex-wrap: wrap;
+}
+
+.features div {
+    width: 190px;
+    padding: 28px 20px;
+    background: linear-gradient(180deg, rgba(21, 27, 40, 1), rgba(11, 17, 30, 1));
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 18px;
+}
+
+.features h3 {
+    font-size: 2.4rem;
+    margin-bottom: 8px;
+}
+
+.features p {
+    color: #dfe7ff;
+    font-weight: 700;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 24px 16px;
+    background: #050a12;
+    color: #8590af;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 16px;
+        padding: 18px 20px;
+    }
+
+    nav ul {
+        gap: 18px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .brand {
+        letter-spacing: 0.08em;
+        font-size: 0.78rem;
+    }
+
+    .hero {
+        padding: 150px 7% 70px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    button,
+    .secondary-btn {
+        width: 100%;
+    }
+
+    .players,
+    .about {
+        padding-left: 7%;
+        padding-right: 7%;
+    }
+
+    .mini-stat {
+        flex: 1 1 120px;
+    }
+}
